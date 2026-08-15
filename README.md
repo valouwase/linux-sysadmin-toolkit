@@ -20,6 +20,25 @@ A Bash script that generates a quick system health report containing:
 * Root filesystem disk usage
 * Logged-in users
 
+### Disk Usage Monitor
+
+`scripts/disk_monitor.sh`
+
+A Bash script that monitors root filesystem disk usage and compares it against a configurable warning threshold.
+
+The script demonstrates:
+
+- Bash variables
+- Command substitution
+- Pipes
+- `awk` text processing
+- `tr` text manipulation
+- Conditional `if/else` logic
+- Numeric comparisons
+- Basic system monitoring
+
+By default, the warning threshold is set to 80%. If disk usage reaches or exceeds the threshold, the script displays a warning.
+
 ## Usage
 
 Clone the repository:
@@ -65,6 +84,7 @@ This project currently demonstrates practical use of:
 ```text
 linux-sysadmin-toolkit/
 ├── scripts/
+│   ├── disk_monitor.sh
 │   └── system_health.sh
 └── README.md
 ```
@@ -73,7 +93,6 @@ linux-sysadmin-toolkit/
 
 Additional utilities will be added progressively, including:
 
-* Disk-usage monitoring and threshold alerts
 * Automated backup scripts
 * Log analysis
 * User and permission auditing
