@@ -39,6 +39,33 @@ The script demonstrates:
 
 By default, the warning threshold is set to 80%. If disk usage reaches or exceeds the threshold, the script displays a warning.
 
+### Automated Backup Utility
+
+`scripts/backup.sh`
+
+A Bash utility that creates timestamped, compressed backups of a specified directory.
+
+The script includes:
+
+- Command-line argument handling
+- Source-directory validation
+- Automatic backup-directory creation
+- Timestamped backup filenames
+- `tar.gz` compression
+- Exit-status checking
+- Basic error handling
+
+Example:
+
+```bash
+./scripts/backup.sh ~/Documents
+
+Backups are stored in:
+
+~/backups/
+
+The backup process was also tested by extracting an archive into a separate restore directory and verifying the restored files.
+
 ## Usage
 
 Clone the repository:
@@ -84,6 +111,7 @@ This project currently demonstrates practical use of:
 ```text
 linux-sysadmin-toolkit/
 ├── scripts/
+│   ├── backup.sh
 │   ├── disk_monitor.sh
 │   └── system_health.sh
 └── README.md
@@ -93,7 +121,6 @@ linux-sysadmin-toolkit/
 
 Additional utilities will be added progressively, including:
 
-* Automated backup scripts
 * Log analysis
 * User and permission auditing
 * Service monitoring
