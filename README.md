@@ -113,6 +113,29 @@ Example:
 
 This utility demonstrates basic Linux account inspection, group membership review, and privileged-user auditing.
 
+### Service Monitor
+
+`scripts/service_monitor.sh`
+
+A Bash utility that checks the operational status of a specified Linux system service using `systemd`.
+
+The script includes:
+
+* Command-line service selection
+* Service existence validation
+* Active/inactive status checking
+* Enabled/disabled startup checking
+* Service status details
+* Error handling for unknown services
+
+Example:
+
+```bash
+./scripts/service_monitor.sh cron
+```
+
+The utility can be used for basic operational monitoring and troubleshooting of Linux services.
+
 ## Usage
 
 Clone the repository:
@@ -169,7 +192,6 @@ linux-sysadmin-toolkit/
 
 Additional utilities will be added progressively, including:
 
-* Service monitoring
 * Basic system administration automation
 
 ## Author
