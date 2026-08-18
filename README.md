@@ -90,6 +90,29 @@ Example:
 
 The utility helps identify recent warning and error events during basic system troubleshooting and operational monitoring.
 
+### User Audit Utility
+
+`scripts/user_audit.sh`
+
+A Bash utility that inspects Linux user and privilege information for basic account auditing.
+
+The script reports:
+
+* Current user and user ID
+* Primary and supplementary groups
+* Users configured with login shells
+* Members of the `sudo` group
+* Accounts with UID `0`
+* Recent login information
+
+Example:
+
+```bash
+./scripts/user_audit.sh
+```
+
+This utility demonstrates basic Linux account inspection, group membership review, and privileged-user auditing.
+
 ## Usage
 
 Clone the repository:
@@ -138,14 +161,14 @@ linux-sysadmin-toolkit/
 │   ├── backup.sh
 │   ├── disk_monitor.sh
 │   ├── log_analyzer.sh
-│   └── system_health.sh
+│   ├── system_health.sh
+│   └── user_audit.sh
 └── README.md```
 
 ## Planned Improvements
 
 Additional utilities will be added progressively, including:
 
-* User and permission auditing
 * Service monitoring
 * Basic system administration automation
 
