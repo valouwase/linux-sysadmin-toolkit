@@ -66,6 +66,30 @@ Backups are stored in:
 
 The backup process was also tested by extracting an archive into a separate restore directory and verifying the restored files.
 
+### Log Analyzer
+
+`scripts/log_analyzer.sh`
+
+A Bash utility that analyzes a specified log file and summarizes error and warning entries.
+
+The script includes:
+
+* Command-line argument handling
+* Log-file validation
+* Case-insensitive error and warning detection
+* Error and warning counters
+* `grep`-based log filtering
+* Extended regular expressions
+* Display of the 10 most recent matching log entries
+
+Example:
+
+```bash
+./scripts/log_analyzer.sh /tmp/sample.log
+```
+
+The utility helps identify recent warning and error events during basic system troubleshooting and operational monitoring.
+
 ## Usage
 
 Clone the repository:
@@ -113,15 +137,14 @@ linux-sysadmin-toolkit/
 ├── scripts/
 │   ├── backup.sh
 │   ├── disk_monitor.sh
+│   ├── log_analyzer.sh
 │   └── system_health.sh
-└── README.md
-```
+└── README.md```
 
 ## Planned Improvements
 
 Additional utilities will be added progressively, including:
 
-* Log analysis
 * User and permission auditing
 * Service monitoring
 * Basic system administration automation
